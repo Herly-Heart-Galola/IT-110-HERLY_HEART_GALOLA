@@ -1,0 +1,180 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}s
+
+body {
+    background-color: #f1f5f9;
+    color: #243047;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 24px 16px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    color: navy; /* named color */
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #2563eb; /* hex color */
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    background-color: rgb(37, 99, 235); /* rgb color */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: rgba(30, 64, 175, 0.95); /* rgba color */
+}
+
+.card {
+    width: 500px;
+    max-width: 100%;
+    padding: 24px;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+}
+
+.card h2 {
+    color: #1d4ed8;
+}
+
+#about {
+    position: relative;
+    border-color: #2563eb;
+    background-color: #eff6ff;
+}
+
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    content: "✦ ";
+    color: #60a5fa;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+h2::before {
+    content: "✦ ";
+    color: #60a5fa;
+}
+
+.skills-list {
+    display: flex;s
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.skills-list > li {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.hide-none {
+    display: none;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+.scroll-box {
+    height: 150px;
+    overflow: auto;
+}
+
+footer {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 18px;
+    }
+
+    #about::after {
+        top: 6px;
+        right: 6px;
+    }
+}
+
+/*
+Reflection Questions
+
+1. One of my conflicting rules won because both selectors had the same
+specificity, so the browser used the rule that appeared later in the CSS
+file. If one selector had been more specific, specificity could have taken
+priority over order.
+
+2. With the content-box, the 500px width applies only to the content and the
+rendered width would be 500px + 48px horizontal padding + 4px borders
+= 552px.
+
+3. I would use visibility, casue it keeps things hidden when I want to hide something but keep
+its space in the layout. like, it can stop nearby items from moving
+when an element becomes invisible.
+*/
